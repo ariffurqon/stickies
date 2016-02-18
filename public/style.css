@@ -1,0 +1,19 @@
+div.note {
+    height: 250px;
+    width: 250px;
+    background-color: #FF4081;
+    margin: 2px 0;
+    position: relative;
+    cursor: -webkit-grab;
+    -webkit-box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+}
+
+div.note button {
+    margin: 2px;
+}
+
+div.note button btn-default {
+	
+}
+

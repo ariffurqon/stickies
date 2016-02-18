@@ -55,8 +55,13 @@
 		render: function render() {
 			return React.createElement(
 				'div',
-				null,
-				' Hello there... '
+				{ className: 'note' },
+				React.createElement(
+					'span',
+					null,
+					React.createElement('button', { className: 'btn btn-default glyphicon glyphicon-pencil' }),
+					React.createElement('button', { className: 'btn btn-default glyphicon glyphicon-trash' })
+				)
 			);
 		}
 	});
