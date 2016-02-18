@@ -52,21 +52,40 @@
 	var Main = React.createClass({
 		displayName: 'Main',
 
+		edit: function edit() {
+			alert("editing note!");
+		},
+
+		delete: function _delete() {
+			alert("deleting note!");
+		},
+
 		render: function render() {
 			return React.createElement(
 				'div',
 				{ className: 'note' },
 				React.createElement(
+					'p',
+					null,
+					this.props.children
+				),
+				React.createElement(
 					'span',
 					null,
-					React.createElement('button', { className: 'btn btn-default glyphicon glyphicon-pencil' }),
-					React.createElement('button', { className: 'btn btn-default glyphicon glyphicon-trash' })
+					React.createElement('button', { onClick: this.edit,
+						className: 'btn btn-default glyphicon glyphicon-pencil' }),
+					React.createElement('button', { onClick: this.delete,
+						className: 'btn btn-default glyphicon glyphicon-trash' })
 				)
 			);
 		}
 	});
 
-	ReactDOM.render(React.createElement(Main, null), document.getElementById('app'));
+	ReactDOM.render(React.createElement(
+		Main,
+		null,
+		'Awesome! '
+	), document.getElementById('app'));
 
 /***/ },
 /* 1 */
